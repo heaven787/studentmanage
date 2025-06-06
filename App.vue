@@ -22,7 +22,6 @@
         
         <el-table
           :data="filteredStudents"
-          border
           style="width: 100%"
           v-loading="loading"
         >
