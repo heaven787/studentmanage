@@ -28,7 +28,7 @@
           <el-table-column prop="id" label="学号" width="120"></el-table-column>
           <el-table-column prop="name" label="姓名" width="120"></el-table-column>
           <el-table-column prop="gender" label="性别" width="80">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               {{ scope.row.gender === 'male' ? '男' : '女' }}
             </template>
           </el-table-column>
@@ -36,7 +36,7 @@
           <el-table-column prop="major" label="专业"></el-table-column>
           <el-table-column prop="grade" label="年级" width="100"></el-table-column>
           <el-table-column label="操作" width="180">
-            <template slot-scope="scope">
+            <template v-slot="scope">
               <el-button
                 size="mini"
                 @click="handleEdit(scope.$index, scope.row)"
